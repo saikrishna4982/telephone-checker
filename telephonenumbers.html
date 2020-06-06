@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	 <title>Telephone Checker</title>
+</head>
+<body>
+<header class="page-header bg-dark mr-5 mt-3" style="padding: 10px;color: white;">
+	<h1>Telephone checker</h1>
+	</header>
+</header>
+<div class="container mt-5" >
+<form class="from-group ml-5">
+	<label>Enter Text</label><br>
+	<input type="text" name="number" placeholder="Enter text to check" class="from-group mr-3" id="number">
+	<button type="button" class="btn btn-primary mr-5" id="button" onclick="telephoneChecker()">Check</button>
+</form>
+</div>
+<script type="text/javascript">
+	function telephoneChecker() {
+		var str=document.getElementById('number');
+		var string=str.value;
+  var regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+  var result= regex.test(string);
+  		if(result===true)
+  		{
+  		alert( string + ' A Correct number');
+  }
+  else{
+    alert( string+ ' not a Number');
+  
+	}
+}
+</script>
+</body>
+</html>
